@@ -3,6 +3,10 @@
 @orange: #f5a54f;
 @font-header: 'Andada', serif;
 
+html, body {
+	height: 100%;
+}
+
 body {
 	background: #f9f9f9 url('../img/crossword.png');
 	border-top: solid 3px #000;
@@ -12,7 +16,7 @@ body {
 
 p, ul, ol {
 	font-size: 20px;
-	line-height: 1.55;
+	line-height: 1.5;
 	margin-bottom: 15px;
 	@media (max-width: @screen-sm) {
 		font-size: 16px;
@@ -21,6 +25,11 @@ p, ul, ol {
 
 a {
 	color: @orange;
+	transition: color .2s ease;
+	&:hover {
+		color: darken(@orange, 20%);
+		text-decoration: none;
+	}
 }
 
 .site__logo {
@@ -30,7 +39,6 @@ a {
 	font-family: @font-header;
 	padding: 12px 9px;
 	&:hover {
-		background: #666;
 		color: #fff;
 		text-decoration: none;
 	}
@@ -41,12 +49,22 @@ a {
 	margin-bottom: 20px;
 }
 
+.site {
+	min-height: 100%;
+  	margin-bottom: -80px; 
+  	&:after {
+  		content: "";
+  		display: block;
+  		height: 80px; 
+  	}
+}
+
 .site__footer {
+	height: 80px; 
 	background: #000;
 	color: #fff;
 	font-size: 14px;
 	font-family: @font-header;
-	margin-top: 50px;
 	padding: 20px 0;
 	a {
 		color: #eee;

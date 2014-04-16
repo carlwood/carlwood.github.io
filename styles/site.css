@@ -4748,6 +4748,10 @@ td.visible-print {
     display: none !important;
   }
 }
+html,
+body {
+  height: 100%;
+}
 body {
   background: #f9f9f9 url('../img/crossword.png');
   border-top: solid 3px #000;
@@ -4758,7 +4762,7 @@ p,
 ul,
 ol {
   font-size: 20px;
-  line-height: 1.55;
+  line-height: 1.5;
   margin-bottom: 15px;
 }
 @media (max-width: 768px) {
@@ -4770,6 +4774,11 @@ ol {
 }
 a {
   color: #f5a54f;
+  transition: color .2s ease;
+}
+a:hover {
+  color: #d2730c;
+  text-decoration: none;
 }
 .site__logo {
   background: #444;
@@ -4779,7 +4788,6 @@ a {
   padding: 12px 9px;
 }
 .site__logo:hover {
-  background: #666;
   color: #fff;
   text-decoration: none;
 }
@@ -4787,12 +4795,21 @@ a {
   padding: 25px 0;
   margin-bottom: 20px;
 }
+.site {
+  min-height: 100%;
+  margin-bottom: -80px;
+}
+.site:after {
+  content: "";
+  display: block;
+  height: 80px;
+}
 .site__footer {
+  height: 80px;
   background: #000;
   color: #fff;
   font-size: 14px;
   font-family: 'Andada', serif;
-  margin-top: 50px;
   padding: 20px 0;
 }
 .site__footer a {
