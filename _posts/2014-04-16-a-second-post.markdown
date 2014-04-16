@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll"
-date:   2014-04-08 23:25:57
+title:  "A Second Post"
+date:   2014-04-16 23:25:57
 categories: jekyll update
 intro: A line or two of brief text about the post could go here.
 ---
