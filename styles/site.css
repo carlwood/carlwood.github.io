@@ -4808,7 +4808,7 @@ a {
 }
 .post__listing .post {
   border-left: solid 5px #ddd;
-  transition: all .5s ease;
+  transition: border-color 0.3s ease, padding 0.3s linear;
   padding-left: 15px;
 }
 .post__listing .post:hover {
@@ -4862,6 +4862,11 @@ a {
 }
 .about {
   font-size: 40px;
+}
+@media (max-width: 768px) {
+  .about {
+    font-size: 26px;
+  }
 }
 @media (max-width: 480px) {
   .post__heading {

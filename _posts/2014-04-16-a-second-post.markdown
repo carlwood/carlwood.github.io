@@ -2,7 +2,7 @@
 layout: post
 title:  "A Second Post"
 date:   2014-04-16 23:25:57
-categories: jekyll update
+category: web
 intro: A line or two of brief text about the post could go here.
 ---
 

@@ -65,7 +65,8 @@ a {
 	padding-left: 20px;
 	.post {
 		border-left: solid 5px #ddd;
-		transition: all .5s ease;
+		transition: border-color 0.3s ease,
+                    padding 0.3s linear;
 		padding-left: 15px;
 		&:hover {
 			border-color: #888;
@@ -123,6 +124,9 @@ a {
 
 .about {
 	font-size: 40px;
+	@media (max-width: @screen-sm) {
+		font-size: 26px;
+	}
 }
 
 .post__heading {
