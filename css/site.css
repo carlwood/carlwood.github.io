@@ -6392,11 +6392,6 @@ h2 {
   text-transform: uppercase;
   color: #fff;
 }
-@media (max-width: 768px) {
-  h2 {
-    font-size: 20px;
-  }
-}
 ul {
   margin: 0;
 }
