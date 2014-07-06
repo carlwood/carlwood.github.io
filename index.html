@@ -1,26 +1,31 @@
 ---
 layout: default
-title: Carl Wood
+title: Homepage
 ---
 
-<div id="home">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <p class="about">I'm <a href="http://twitter.com/carljwood">Carl</a>, a front-end developer <a href="http://twitter.com/whiteoctober">@whiteoctober</a> living in Oxford.</p>
-            <p class="about">Blog coming soon.</p>
-            <!--<h3 class="post__listing__title">Posts</h3>
-            <ul class="post__listing list-unstyled">
-            {% for post in site.posts %}
-                <li class="post"> 
-                    <div class="post__heading">
-                        <h2 class="post__title"><a class="post__link" href="{{ post.url }}">{{ post.title }}</a></h2>
-                        <span class="post__meta">{{ post.date | date_to_string }}</span>
-                        <span class="post__meta">in {{ post.category }}</span>
-                        <p class="post__intro">{{ post.intro }}</p>
-                    </div>
-                </li>
-            {% endfor %}
-            </ul> -->
-        </div>
-    </div>
+<div class="home">
+  <ul class="post__listing list-unstyled">
+    {% for post in site.posts %}
+      <li class="post--home" itemscope itemtype="http://schema.org/BlogPosting">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="post__link" itemprop="url">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h1 class="post__title" itemprop="name headline">{{ post.title }}</h1>
+                <h5 class="post__date">
+                  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ post.date | date_to_long_string }}
+                  </time> | 
+                  <span>
+                    {{ post.category }}
+                  </span>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
 </div>

@@ -1,4 +1,15 @@
-name: CW
-markdown: redcarpet
+name: "Carl Wood"
+description: "Web, Music and Miscellanea"
+
+author: "Carl Wood"
+
+url: "http://carlwood.net"
+baseurl: ""
+
+markdown: rdiscount
+permalink: :year/:month/:title
 pygments: true
-permalink: /:year/:day/:month/:title
+
+# Google Analytics
+ga_domain: carlwood.net
+ga_tracking_id: UA-41063708-1

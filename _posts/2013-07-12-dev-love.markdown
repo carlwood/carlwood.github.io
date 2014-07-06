@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "How to make a front-end dev love you"
+date:   2013-07-12
+category: web
+---
+
+Okay, so the title is a wee-bit hyperbolic, but here’s a set of tips to streamline the design and markup process (by a front-end dev). Ideas that have made my life easier.
+
+##Curbing Photoshop layer enthusiasm
+
+A number of masks or effects applied to an element can make it tricky to successfully translate into CSS. The fewer the better! As we’ve found at [White October](http://whiteoctober.co.uk/), annotating your psds can be useful.
+
+##Sticking to your grid
+
+I love working with grids; they provide simplicity for both the designer and front-end developer. Let’s stick to those columns in the design process to speed up development.
+
+##Showing your colours
+
+Setting out a colour palette at the top of your psd can be a wonderful thing for both designers and developers. That way you won’t get the main colours wrong, and neither will we!
+
+##Choosing web fonts wisely
+
+Communicate and work with your front-end dev from an early stage. Often fonts that you presume will work brilliantly across all browsers sometimes don’t. We’ve had this bite us in the ass before. I’d recommend Typecast and early testing.
+
+##Embracing a component approach
+
+Providing your client doesn’t mind the process, designing components of the website rather than whole pages makes things more consistent. We know that - for example - the post author section has one style; why repeat yourself? The result is a much clearer document for the dev to work from.
+
+Love, Carl

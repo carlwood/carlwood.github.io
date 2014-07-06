@@ -1,15 +1,54 @@
 ---
 layout: default
 ---
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post post--single">
-            <div class="post__heading">
-                <span class="post__meta">{{ page.date | date_to_string }}</span>
-                <span class="post__meta">in {{ page.category }}</span>
-                <h1 class="post__title">{{ page.title }}</h1>
-            </div>
-            {{ content }}
-        </div>
+
+<div class="post__heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h1 class="post__title" itemprop="name headline">{{ page.title }}</h1>
+      </div>
     </div>
+  </div>
 </div>
+
+<article class="post post--single" itemscope itemtype="http://schema.org/BlogPosting">
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-7 col-md-offset-1">
+    
+        <div class="post__body" itemprop="post__body">
+          <h5 class="post__date">
+            <span>Posted on </span>
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {{ page.date | date_to_long_string }}
+            </time>
+          </h5>
+          {{ content }}
+        </div>
+
+        <div class="post__share" class="feat">
+          <a href="http://twitter.com/carljwood">
+            <span class="icon-twitter"></span>
+          </a>
+        </div>
+        
+        <div class="post__nav">
+          {% if page.previous %}
+            <a rel="prev" class="btn" href="{{ site.baseurl }}{{ page.previous.url }}" id="prev">
+              &larr; Older
+            </a>
+          {% endif %}
+          {% if page.next %}
+            <a rel="next" class="btn" href="{{ site.baseurl }}{{ page.next.url }}" id="next">
+              Newer &rarr;
+            </a>
+          {% endif %}
+        </div>
+    
+    </div>
+  </div> <!-- /row -->
+</div> <!-- /container -->
+</article>
