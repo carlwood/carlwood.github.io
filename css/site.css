@@ -6346,7 +6346,7 @@ a:hover {
 @media (max-width: 768px) {
   .post__heading {
     margin-bottom: 15px;
-    padding: 20px 0;
+    padding: 15px 0;
   }
 }
 .post__heading .post__title {
@@ -6364,6 +6364,11 @@ a:hover {
   display: block;
   font-family: 'Roboto Condensed';
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .post__date {
+    font-size: 12px;
+  }
 }
 .post__link {
   background: #333;
@@ -6390,6 +6395,11 @@ a:hover {
   color: #888;
   margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+  .post__body .post__date {
+    margin-bottom: 15px;
+  }
+}
 .lead {
   border-bottom: solid 5px #2c2c2c;
   border-top: solid 5px #2a2a2a;
@@ -6397,11 +6407,12 @@ a:hover {
   font-size: 26px;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 1.5;
-  padding: 15px 0 20px 0;
+  padding: 15px 0;
 }
 @media (max-width: 768px) {
   .lead {
     font-size: 20px;
+    padding: 10px 0;
   }
 }
 h1,
