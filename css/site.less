@@ -64,7 +64,7 @@ a {
 	//border-bottom: solid 5px #222;
 	padding: 20px 0;
 	@media (max-width: @screen-sm) {
-		font-size: 15px;
+		font-size: 14px;
 	}
 	p {
 		margin: 0;
@@ -109,6 +109,7 @@ a {
 .post__title {
 	font-size: 28px;
 	font-weight: bold;
+	text-shadow: 3px 3px 1px rgba(0,0,0,.3);
 	@media (max-width: @screen-sm) {
 		font-size: 22px;
 	}
@@ -132,7 +133,8 @@ a {
 		font-size: 42px;
 		margin: 0;
 		@media (max-width: @screen-sm) {
-			font-size: 32px;
+			font-size: 26px;
+			line-height: 1.25;
 		}
 	}
 }
@@ -171,6 +173,19 @@ a {
 	}
 }
 
+.lead {
+	border-bottom: solid 5px #2c2c2c;
+	border-top: solid 5px #2a2a2a;
+	color: #fff;
+	font-size: 26px;
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 1.5;
+	padding: 15px 0 20px 0;
+	@media (max-width: @screen-sm) {
+		font-size: 20px;
+	}
+}
+
 h1, h2 {
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -182,6 +197,9 @@ h2 {
 	margin-top: 25px;
 	text-transform: uppercase;
 	color: #fff;
+	@media (max-width: @screen-sm) {
+		margin-bottom: 10px;
+	}
 }
 
 ul {
