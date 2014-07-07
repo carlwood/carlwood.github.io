@@ -6393,7 +6393,7 @@ a:hover {
 }
 .post__body .post__date {
   color: #888;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .post__body .post__date {
@@ -6401,18 +6401,17 @@ a:hover {
   }
 }
 .lead {
-  border-bottom: solid 5px #2c2c2c;
-  border-top: solid 5px #2a2a2a;
+  border-top: solid 5px #2c2c2c;
   color: #fff;
   font-size: 26px;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 1.5;
-  padding: 15px 0;
+  padding: 20px 0 10px;
+  margin-bottom: 30px;
 }
 @media (max-width: 768px) {
   .lead {
     font-size: 20px;
-    padding: 10px 0;
   }
 }
 h1,
@@ -6422,10 +6421,10 @@ h2 {
 h2 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 15px;
-  margin-top: 25px;
-  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
   color: #fff;
+  text-transform: uppercase;
 }
 @media (max-width: 768px) {
   h2 {
