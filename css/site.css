@@ -6372,24 +6372,24 @@ a:hover {
   }
 }
 .post__link {
-  background: #333;
-  border-bottom: solid 1px #2b2b2b;
+  border-bottom: solid 1px #ccc;
   padding: 25px 0;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
-  color: #fff;
+  color: #333;
   display: block;
 }
 .post__link:hover {
   background: #C04B33;
-  color: #fff;
+  color: #666;
   text-decoration: none;
 }
 .post__link .post__title {
   margin: 0 0 10px;
 }
 .post__link .post__date {
+  color: #aaa;
   margin: 0;
 }
 .post__body .post__date {
