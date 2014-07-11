@@ -6382,8 +6382,11 @@ a:hover {
 }
 .post__link:hover {
   background: #C04B33;
-  color: #666;
+  color: #fff;
   text-decoration: none;
+}
+.post__link:hover .post__date {
+  color: #ddd;
 }
 .post__link .post__title {
   margin: 0 0 10px;
