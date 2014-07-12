@@ -6378,7 +6378,7 @@ a:hover {
   display: block;
 }
 .post__link:hover {
-  background: #f1f1f1;
+  background: #eee;
   border-bottom-color: #bbb;
   color: #333;
   text-decoration: none;
