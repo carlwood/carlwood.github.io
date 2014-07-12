@@ -20,12 +20,6 @@ layout: default
     <div class="col-md-9 col-lg-7 col-md-offset-1">
     
         <div class="post__body" itemprop="post__body">
-          <h5 class="post__date">
-            <span>Posted on </span>
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-              {{ page.date | date_to_long_string }}
-            </time>
-          </h5>
           {{ content }}
         </div>
 
