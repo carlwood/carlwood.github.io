@@ -1,7 +1,7 @@
 @import 'bootstrap/bootstrap';
 
 body {
-	background: #f9f9f9;
+	background: #fff;
 	font-size: 18px;
 	font-family: 'Lato', Arial;
 	line-height: 1.55;
@@ -114,10 +114,11 @@ a {
 }
 
 .post__title {
-	font-size: 28px;
+	font-family: "Bitter", 'Helvetica', Arial;
+	font-size: 22px;
 	font-weight: bold;
 	@media (max-width: @screen-sm) {
-		font-size: 24px;
+		font-size: 18px;
 	}
 }
 
@@ -134,6 +135,7 @@ a {
 		padding: 15px 0;
 	}
 	.post__title {
+
 		font-size: 40px;
 		padding: 40px 0 35px;
 		margin: 0;
@@ -148,7 +150,6 @@ a {
 .post__date {
 	color: #ddd;
 	display: block;
-	font-family: 'Bitter', sans-serif;
 	text-transform: uppercase;
 	font-size: 12px;
 	@media (max-width: @screen-sm) {
@@ -157,19 +158,21 @@ a {
 }
 
 .post__listing {
-	border-bottom: solid 1px #ccc;
+	border-bottom: solid 1px #eee;
 }
 
 .post__link {
-	border-top: solid 1px #ccc;
+	border-top: solid 1px #eee;
+	border-left: solid 5px #fff;
 	border-bottom: 0;
 	padding: 25px 0;
 	.transition(background-color .3s ease-in-out);
 	color: #333;
 	display: block;
 	&:hover {
-		background: #eee;
-		border-color: #ccc;
+		background: #fafafa;
+		border-color: #ddd;
+		border-left: solid 5px #C04B33;
 		color: #333;
 		text-decoration: none;
 		.post__date {
@@ -198,26 +201,33 @@ a {
 
 
 h1 {
-	font-family: "Bitter";
+	
 	letter-spacing: -1px;
 	font-weight: 700;
 }
 
 .lead {
-	font-family: "Bitter", 'Helvetica', Arial;
-	background: #eee;
-	font-size: 18px;
+	font-size: 26px;
+	font-weight: bold;
+	letter-spacing: -1px;
 	line-height: 1.6;
 	margin-top: 0;
-	padding: 15px 15px 15px 100%;
-	margin-left: -100%;
+	padding: 15px 0;
 	@media (max-width: @screen-sm) {
-		font-size: 16px;
+		font-size: 22px;
+		padding: 0;
 	}
 }
 
 .home .lead {
+	font-family: "Bitter", 'Helvetica', Arial;
+	font-size: 36px;
+	text-align: center;
 	margin-bottom: 0;
+	padding: 30px 0;
+	@media (max-width: @screen-sm) {
+		font-size: 24px;
+	}
 }
 
 h2 {
