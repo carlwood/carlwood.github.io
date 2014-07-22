@@ -5,7 +5,7 @@ date:   2013-07-12
 category: web
 ---
 
-<p class="lead">Here's a set of tips to streamline the design and markup process. Ideas that have made my life easier.</p>
+<p class="first">Here's a set of tips to streamline the design and markup process. Ideas that have made my life easier.</p>
 
 ##Curbing Photoshop layer enthusiasm
 

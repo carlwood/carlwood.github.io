@@ -5,7 +5,7 @@ date:   2014-07-06
 category: web
 ---
 
-<p class="lead">You are your own worst client.</p>
+You are your own worst client.
 
 Voila! My new blog. I'll be iterating upon it: cleaning up code, styling, fixing bugs, and I might even write a few posts.
 

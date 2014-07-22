@@ -6183,6 +6183,11 @@ button.close {
     display: none !important;
   }
 }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../assets/fonts/glyphicons-halflings-regular.eot');
+  src: url('../assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
 body {
   background: #fff;
   font-size: 18px;
@@ -6193,6 +6198,9 @@ body {
   body {
     font-size: 16px;
   }
+}
+p {
+  font-family: Georgia, serif;
 }
 ::selection {
   background: rgba(0, 0, 0, 0.4);
@@ -6255,6 +6263,7 @@ a:hover {
 }
 .site__header p {
   color: #fff;
+  font-family: 'Lato';
   margin: 0;
 }
 .site__header a {
@@ -6287,6 +6296,9 @@ a:hover {
   .nav--primary {
     margin-top: 10px;
   }
+}
+.nav--primary a {
+  border: 0;
 }
 .nav--primary li {
   margin-right: 15px;
@@ -6345,7 +6357,7 @@ a:hover {
   }
 }
 .post__heading .post__title {
-  font-size: 40px;
+  font-size: 36px;
   padding: 40px 0 35px;
   margin: 0;
 }
@@ -6441,13 +6453,12 @@ h1 {
   }
 }
 h2 {
-  font-size: 19px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 7px;
   margin-top: 30px;
   color: #000;
   font-weight: 700;
   line-height: 1.4;
-  font-family: "Bitter", 'Helvetica', Arial;
 }
 @media (max-width: 768px) {
   h2 {
