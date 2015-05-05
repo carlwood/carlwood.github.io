@@ -1,48 +1,29 @@
 ---
 layout: default
 ---
+<div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="post__heading">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h1 class="post__title" itemprop="name headline">{{ page.title }}</h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <header class="post__heading">
+                <div class="post__meta">
+                    <ul class="list-inline list-unstyled">
+                      <li>{{ page.date | date: "%-d %B %Y" }}</li>•
+                      <li>{{ page.category }}</li>
+                    </ul>
+                </div>
+                <h1 class="post__title">{{ page.title }}</h1>
+              </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <article class="post-content">
+                {{ content }}
+              </article>
+            </div>
+        </div>
     </div>
-  </div>
+
 </div>
-
-<article class="post post--single" itemscope itemtype="http://schema.org/BlogPosting">
-
-<div class="container">
-
-  <div class="row">
-    <div class="col-md-8 col-lg-7 col-md-offset-2">
-
-        <div class="post__body" itemprop="post__body">
-          {{ content }}
-        </div>
-
-        <div class="post__share" class="feat">
-          <a href="http://twitter.com/carljwood">
-            <span class="icon-twitter"></span>
-          </a>
-        </div>
-        
-        <div class="post__nav">
-          {% if page.previous %}
-            <a rel="prev" class="btn" href="{{ site.baseurl }}{{ page.previous.url }}" id="prev">
-              &larr; Older
-            </a>
-          {% endif %}
-          {% if page.next %}
-            <a rel="next" class="btn" href="{{ site.baseurl }}{{ page.next.url }}" id="next">
-              Newer &rarr;
-            </a>
-          {% endif %}
-        </div>
-    
-    </div>
-  </div> <!-- /row -->
-</div> <!-- /container -->
-</article>

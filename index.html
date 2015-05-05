@@ -1,38 +1,121 @@
 ---
 layout: default
-title: Homepage
 ---
 
 <div class="home">
   <div class="container">
+
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <p class="lead">A collection of writings on web, music and miscellanea.</p>
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="header--spaced">I'm Carl, a front-end developer with a passion for UX <span class="amp">&amp;</span> beautiful markup.</h1>
       </div>
     </div>
-  </div>
-  <ul class="post__listing list-unstyled">
-    {% for post in site.posts %}
-      <li class="post--home" itemscope itemtype="http://schema.org/BlogPosting">
-        <a href="{{ site.baseurl }}{{ post.url }}" class="post__link" itemprop="url">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <h1 class="post__title" itemprop="name headline">{{ post.title }}</h1>
-                <h5 class="post__date">
-                  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {{ post.date | date_to_long_string }}
-                  </time> | 
-                  <span>
-                    {{ post.category }}
-                  </span>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
 
-</div>
+    <div class="item-listing">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="post--home">
+            <a class="post__link" href="http://theleaddeveloper.com">
+              <img src="/assets/img/lead-dev.jpg" alt="The Lead Developer Conference">
+              <h2 class="work-title" itemprop="name headline">Lead Developer Conference</h2>
+              <ul class="work-skills list-inline list-unstyled">
+                <li>
+                  HTML/CSS
+                </li>
+                <li>
+                  JS
+                </li>
+                <li>
+                  Design
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="post--home">
+            <a class="post__link" href="http://test.oxan.com">
+              <img src="/assets/img/oxan.jpg" alt="OxAn Daily Brief">
+              <h2 class="work-title" itemprop="name headline">OxAn Daily Brief</h2>
+              <ul class="work-skills list-inline list-unstyled">
+                <li>
+                  HTML/CSS
+                </li>
+                <li>
+                  JS
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="post--home">
+            <a class="post__link" href="http://paragonchg.co.uk">
+              <img src="/assets/img/paragon.jpg" alt="Paragon Housing">
+              <h2 class="work-title" itemprop="name headline">Paragon Housing Association</h2>
+              <ul class="work-skills list-inline list-unstyled">
+                <li>
+                  HTML/CSS
+                </li>
+                <li>
+                  JS
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="post--home">
+            <a class="post__link" href="http://jqueryuk.com">
+              <img src="/assets/img/jquk.jpg" alt="jQuery UK Conference">
+              <h2 class="work-title" itemprop="name headline">JQUK 2015 Conference</h2>
+              <ul class="work-skills list-inline list-unstyled">
+                <li>
+                  HTML/CSS
+                </li>
+                <li>
+                  JS
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="post--home">
+            <a class="post__link" href="http://hamilton-trust.org.uk">
+              <img src="/assets/img/hamilton.jpg" alt="Hamilton Trust">
+              <h2 class="work-title" itemprop="name headline">Hamilton Trust</h2>
+              <ul class="work-skills list-inline list-unstyled">
+                <li>
+                  HTML/CSS
+                </li>
+                <li>
+                  JS
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="post--home">
+            <a class="post__link" href="http://oxforddictionaries.com">
+              <img src="/assets/img/ox-dictionaries.jpg" alt="Oxford Dictionaries">
+              <h2 class="work-title" itemprop="name headline">Oxford Dictionaries</h2>
+              <ul class="work-skills list-inline list-unstyled">
+                <li>
+                  HTML/CSS
+                </li>
+                <li>
+                  JS
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /item-listing -->
+
+  </div> <!-- /container -->
+</div> <!-- /home -->

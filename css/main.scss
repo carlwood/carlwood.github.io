@@ -1,0 +1,369 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Fonts, colours
+
+$font-family-serif: 'Merriweather', serif;
+$brand-primary:     #57546B; // Purple
+$brand-color1:      #fdfdfd; // Grey
+
+@import
+    "syntax-highlighting",
+    "bootstrap"
+;
+
+// Mixins
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Base
+
+body {
+    background: $brand-color1;
+    font-size: 15px;
+    font-family: $font-family-serif;
+    line-height: 1.6;
+    @include media-query(680px) {
+        font-size: 15px;
+    }
+}
+
+// Headings
+
+h1, h2, h3, p, ul, ol {
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+    color: #222;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    color: #444;
+    font-size: 40px;
+    letter-spacing: .5px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    text-transform: none;
+    text-align: center;
+    @include media-query(680px) {
+        font-size: 26px;
+    }
+}
+
+h2 {
+    color: #444;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+}
+
+// Block type
+
+ul, ol, p {
+    line-height: 1.75;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+// Header
+
+.header--spaced {
+    margin-bottom: 60px;
+    @include media-query(680px) {
+        margin-bottom: 40px;
+    }
+}
+
+.site-header {
+    background: #57546B;
+    color: #bbb;
+    margin-bottom: 40px;
+    font-size: 8px;
+    width: 100%;
+    @include media-query(680px) {
+        margin-bottom: 20px;
+    }
+}
+
+.site-logo {
+    background: $brand-primary;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    padding: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    -webkit-font-smoothing: antialiased;
+    color: #eee;
+    display: inline-block;
+    position: absolute;
+    line-height: 1.4;
+    &:hover {
+        color: #eee;
+        text-decoration: none;
+    }
+}
+
+// Footer
+
+.site-footer {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 25px;
+    padding: 15px 0;
+    a {
+        color: #888;
+    }
+}
+
+// Navigation
+
+.nav--primary {
+    float: right;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.nav--primary__link {
+    border-bottom: solid 5px transparent;
+    color: #F9EAE1;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 15px 15px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    -webkit-font-smoothing: antialiased;
+    &:hover,
+    &:focus,
+    &:active {
+        border-bottom-color: #ddd;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.post-content {
+    p:first-child:first-letter {
+        font-family: 'Playfair Display', serif;
+        font-weight: 500;
+        font-size: 88px;
+        vertical-align: top;
+        line-height: 0;
+        float: left;
+        margin: 32px 7px 29px 0px;
+        color: #57546B;
+    }
+    a {
+        border-bottom: solid 2px #ccc;
+        color: #666;
+        &:hover {
+            border-bottom-color: #333;
+            text-decoration: none;
+        }
+    }
+
+}
+
+.post--home {
+    margin-bottom: 70px;
+    @include media-query(680px) {
+        margin-bottom: 40px;
+    }
+}
+
+// Posts
+
+.post--home {
+    h1 {
+        font-size: 26px;
+        margin: 5px 0 15px;
+        text-align: left;
+    }
+    p {
+        font-size: 14px;
+    }
+    .post__meta {
+        margin-bottom: 10px;
+    }
+}
+
+// Work examples on home page
+
+.work-title {
+    color: #444;
+    margin: 15px 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.work-skills {
+    color: #888;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.post__link {
+    color: #444;
+    &:hover {
+        color: $brand-primary;
+    }
+}
+
+.item-listing {
+    margin-bottom: 50px;
+}
+
+// Blog posts
+
+.post__meta {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    letter-spacing: .1em;
+    font-size: 10px;
+    color: #bbb;
+    text-shadow: 1px 1px rgba(255,255,255,.4);
+    margin-bottom: 8px;
+    ul {
+        margin-bottom: 0;
+    }
+    li {
+        font-weight: 700;
+    }
+}
+
+.post__title {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+    text-transform: none;
+}
+
+.post__title--home {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 5px 0 15px;
+    text-align: left;
+}
+
+.post__heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.post__link {
+    display: block;
+    position: relative;
+    img {
+        border-bottom: solid 5px #fff;
+        transition: opacity ease-in-out .3s;
+        -webkit-transition: opacity ease-in-out .3s;
+        opacity: 0.85;
+    }
+    &:hover {
+        text-decoration: none;
+        img {
+            opacity: 1;
+        }
+        p, h1 {
+            color: #57546B;
+        }
+    }
+    p {
+        color: #444;
+    }
+}
+
+// Buttons
+
+.btn {
+    border-radius: 0;
+}
+
+// Misc
+
+hr {
+    border: 0;
+    border-top: solid 2px #fafafa;
+}
+
+.icon--home {
+    margin-right: 5px;
+}
+
+.amp {
+    font-weight: 300;
+}
+
+// Code samples
+
+pre {
+    background: #f2f2f2;
+    border: 0;
+    border-radius: 0;
+    color: #595858;
+    line-height: 1.6;
+    padding: 20px 25px;
+    margin: 15px -15px;
+}
+
+code {
+    background: #fafafa;
+    color: #726E8B;
+    border-radius: 0;
+}
+
+.highlight .nt {
+    color: #AEB8D8;
+}
+
+.highlight .s {
+    color: #eee;
+}
+
+.highlight .na {
+    color: #ccc;
+}
+
+.highlight .nc {
+    color: #AEB8D8;
+}
+
+.highlight .k {
+    font-weight: normal;
+}
+
+.highlight .lineno {
+    color: #726E8B;
+    margin-right: 5px;
+}
