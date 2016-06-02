@@ -9,7 +9,7 @@ twitter_username: carljwood
 github_username:  carlwood
 
 # Build settings
-markdown: rdiscount
+markdown: kramdown
 permalink: blog/:year/:title
 higlighter: true
 
