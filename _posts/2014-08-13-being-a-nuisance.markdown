@@ -13,7 +13,7 @@ Placing your radio buttons and checkboxes in labels allows the user to activate 
     
 ```
 <label>
-  <input type="checkbox"/> Free money
+  <input type="checkbox"> Free money
 </label>
 ```
 
@@ -21,7 +21,7 @@ We missed the 'for' attribute out of that last code example. Clicking a label wi
 
 ```
 <label for="surname">Surname</label>
-<input type="text" id="surname"/>
+<input type="text" id="surname">
 ```
 
 ## Enter to submit
@@ -32,8 +32,6 @@ Users should be able to submit forms by completing the fields and hitting 'enter
 
 Add padding to your menu links and not your list items. This will provide a bigger hit area - and your users will thank you when it comes to mobile and tablet browsing.
 
-## Placeholders as samples, not labels
-Or use JS placeholders
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
