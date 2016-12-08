@@ -85,6 +85,15 @@ p {
 
 .header--spaced {
     margin-bottom: 60px;
+    &:after {
+        content: '';
+        border-top: solid 5px rgba($brand-primary, 0.1);
+        width: 100px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -50px;
+    }
     @include media-query(680px) {
         margin-bottom: 40px;
     }
@@ -196,6 +205,10 @@ img {
     }
 }
 
+.img--bordered {
+    border: solid 1px rgba(0,0,0,0.2);
+}
+
 // Posts
 
 .post--home {
@@ -280,7 +293,7 @@ img {
     display: block;
     position: relative;
     img {
-        border-bottom: solid 5px #fff;
+        margin-bottom: 5px;
         transition: opacity ease-in-out .3s;
         -webkit-transition: opacity ease-in-out .3s;
         opacity: 0.85;
