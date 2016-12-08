@@ -8,6 +8,7 @@
 $font-family-serif: 'Merriweather', serif;
 $brand-primary:     #57546B; // Purple
 $brand-color1:      #fdfdfd; // Grey
+$brand-color2:      #f9eae1; // Purply grey
 
 @import
     "syntax-highlighting",
@@ -84,18 +85,21 @@ p {
 // Header
 
 .header--spaced {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     &:after {
         content: '';
         border-top: solid 5px rgba($brand-primary, 0.1);
         width: 100px;
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
         left: 50%;
         margin-left: -50px;
+        @include media-query(991px) {
+            bottom: 20px;
+        }
     }
     @include media-query(680px) {
-        margin-bottom: 40px;
+        margin: 0;
     }
 }
 
@@ -151,7 +155,7 @@ p {
 
 .nav--primary__link {
     border-bottom: solid 5px transparent;
-    color: #F9EAE1;
+    color: $brand-color2;
     display: block;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
@@ -162,6 +166,7 @@ p {
     font-size: 11px;
     letter-spacing: 0.2em;
     -webkit-font-smoothing: antialiased;
+    transition: all 0.2s;
     &:hover,
     &:focus,
     &:active {
