@@ -10,7 +10,7 @@ github_username:  carlwood
 
 # Build settings
 markdown: kramdown
-permalink: blog/:year/:title
+permalink: blog/:title
 higlighter: true
 
 # Google Analytics

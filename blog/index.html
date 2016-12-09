@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div role="main">
+    <div class="container">
+    <h1>Things I've written</h1>
+    <ul class="list-unstyled list-inline">
+        {% for post in site.posts %}
+        <li>
+            <a class="mini-btn" href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+</div>

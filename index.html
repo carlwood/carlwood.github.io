@@ -82,11 +82,11 @@ layout: default
 
         <h2>Things I've written</h2>
         <ul class="list-unstyled list-inline">
-          {% for post in site.posts %}
-            <li>
-                <a class="mini-btn" href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
+            {% for post in site.posts %}
+                <li>
+                    <a class="mini-btn" href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
         </ul>
 
         <hr class="hr">
