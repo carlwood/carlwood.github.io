@@ -82,7 +82,7 @@ p {
     margin-bottom: 20px;
 }
 
-// Header
+// Heading type
 
 .header--spaced {
     padding-bottom: 60px;
@@ -102,6 +102,16 @@ p {
         margin: 0;
     }
 }
+
+.header--big {
+    font-size: 70px;
+    margin-top: 0;
+    @include media-query(680px) {
+        font-size: 48px;
+    }
+}
+
+// Header
 
 .site-header {
     background: #57546B;
@@ -372,8 +382,14 @@ hr {
     font-weight: 300;
 }
 
+// Utility classes
+
 .u-normal-case {
     text-transform: none;
+}
+
+.u-center {
+    text-align: center;
 }
 
 // Code samples
