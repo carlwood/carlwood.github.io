@@ -23,8 +23,9 @@ layout: default
                                 </a>
                                 <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
                                 <ul class="work-skills list-inline list-unstyled">
-                                    <li>HTML/CSS</li>
-                                    <li>JS</li>
+                                    {% for skill in post.skills %}
+                                        <li>{{ skill }}</li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -41,8 +42,9 @@ layout: default
                                 </a>
                                 <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
                                 <ul class="work-skills list-inline list-unstyled">
-                                    <li>HTML/CSS</li>
-                                    <li>JS</li>
+                                    {% for skill in post.skills %}
+                                        <li>{{ skill }}</li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
