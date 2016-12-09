@@ -2,7 +2,7 @@
 layout: post
 title:  "How to make a front-end dev love you"
 date:   2013-07-12
-category: web
+category: post
 type: blog
 ---
 

@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Oxford Analytica Daily Brief"
+category: post
+type: work
+siteurl: https://test.oxan.com/
+image: assets/img/oxan.jpg
+---

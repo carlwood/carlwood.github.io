@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Camden GPs"
+category: post
+type: headline
+siteurl: http://gps.camdenccg.nhs.uk
+image: assets/img/ccg.jpg
+---

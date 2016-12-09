@@ -2,7 +2,7 @@
 layout: post
 title:  "Usability bug bears"
 date:   2014-08-13
-category: web
+category: post
 type: blog
 ---
 I have had this post in my mind for a while. The more we browse the web - and, shit, do we! - the more we rely on our own techniques and experiences to do so quickly and efficiently. We may appreciate subtle design nuances, but we're usually adept at finding usability flaws: the small bug bears that stutter our progress. So how do we ensure, as developers, that we're providing the best experience possible, using the simplest techniques?

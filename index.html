@@ -11,70 +11,43 @@ layout: default
         </div>
    
         <h2>A handful of my projects</h2>
+
         <div class="item-listing">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
-                        <a class="post__link" itemprop="url" href="http://www.convergence-london.com/2017">
-                            <img itemprop="image" src="/assets/img/convergence.jpg" alt="Convergence London 2017">
-                            <h2 class="work-title" itemprop="name">Convergence London</h2>
-                            <ul class="work-skills list-inline list-unstyled">
-                                <li>HTML/CSS</li>
-                                <li>JS</li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
-                        <a class="post__link" itemprop="url" href="http://gps.camdenccg.nhs.uk">
-                            <img itemprop="image" src="/assets/img/ccg.jpg" alt="CCG">
-                            <h2 class="work-title" itemprop="name">Camden <span class="u-normal-case">GPs</span></h2>
-                            <ul class="work-skills list-inline list-unstyled">
-                                <li>HTML/CSS</li>
-                                <li>JS</li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
+                {% for post in site.posts %}
+                    {% if post.type contains 'headline' %}
+                        <div class="col-sm-6">
+                            <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
+                                <a class="post__link" href="{{ post.siteurl }}">
+                                    <img itemprop="image" src="{{ post.image }}" alt="{{ post.title }}">
+                                </a>
+                                <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                <ul class="work-skills list-inline list-unstyled">
+                                    <li>HTML/CSS</li>
+                                    <li>JS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
-                        <a class="post__link" itemprop="url" href="http://rehearseit.co.uk">
-                            <img itemprop="image" src="/assets/img/rehearse-it.jpg" alt="Rehearse It!">
-                            <h2 class="work-title" itemprop="name">Rehearse It!</h2>
-                            <ul class="work-skills list-inline list-unstyled">
-                                <li>HTML/CSS</li>
-                                <li>JS</li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
-                        <a class="post__link" itemprop="url" href="http://test.oxan.com">
-                            <img itemprop="image" src="/assets/img/oxan.jpg" class="img--bordered" alt="OxAn Daily Brief">
-                            <h2 class="work-title" itemprop="name">Oxford Analytica Daily Brief</h2>
-                            <ul class="work-skills list-inline list-unstyled">
-                                <li>HTML/CSS</li>
-                                <li>JS</li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
-                        <a class="post__link" itemprop="url" href="http://www.rebeccahurst.co.uk/">
-                            <img itemprop="image" src="/assets/img/rebecca-hurst.jpg" alt="Rebecca Hurst">
-                            <h2 class="work-title" itemprop="name">Rebecca Hurst</h2>
-                            <ul class="work-skills list-inline list-unstyled">
-                                <li>HTML/CSS</li>
-                                <li>JS</li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
+                {% for post in site.posts limit: 3 %}
+                    {% if post.type contains 'work' %}
+                        <div class="col-sm-4">
+                            <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
+                                <a class="post__link" href="{{ post.siteurl }}">
+                                    <img itemprop="image" src="{{ post.image }}" alt="{{ post.title }}">
+                                </a>
+                                <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                <ul class="work-skills list-inline list-unstyled">
+                                    <li>HTML/CSS</li>
+                                    <li>JS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
 
@@ -83,9 +56,11 @@ layout: default
         <h2>Things I've written</h2>
         <ul class="list-unstyled list-inline">
             {% for post in site.posts %}
-                <li>
-                    <a class="mini-btn" href="{{ post.url }}">{{ post.title }}</a>
-                </li>
+                {% if post.type contains 'blog' %}
+                    <li>
+                        <a class="mini-btn" href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
 
