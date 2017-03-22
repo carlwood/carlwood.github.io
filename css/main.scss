@@ -10,6 +10,10 @@ $brand-primary:     #57546B; // Purple
 $brand-color1:      #fdfdfd; // Grey
 $brand-color2:      #f9eae1; // Purply grey
 
+// Breakpoints
+
+$phone-down: 680px;
+
 @import
     "syntax-highlighting",
     "bootstrap"
@@ -30,14 +34,22 @@ body {
     font-size: 15px;
     font-family: $font-family-serif;
     line-height: 1.6;
-    @include media-query(680px) {
-        font-size: 15px;
+    @include media-query($phone-down) {
+        font-size: 14px;
     }
+}
+
+.site-content {
+    padding: 0 1.5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    @extend .clearfix;
 }
 
 // Headings
 
 h1, h2, h3, p, ul, ol {
+    margin-top: 0;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -56,7 +68,16 @@ h1 {
     margin-bottom: 30px;
     text-transform: none;
     text-align: center;
-    @include media-query(680px) {
+    small {
+        display: block;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: $font-family-serif;
+    }
+    @include media-query($phone-down) {
         font-size: 26px;
     }
 }
@@ -66,7 +87,6 @@ h2 {
     font-size: 15px;
     font-family: 'Lato', sans-serif;
     margin-bottom: 15px;
-    margin-top: 30px;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
@@ -98,7 +118,7 @@ p {
             bottom: 20px;
         }
     }
-    @include media-query(680px) {
+    @include media-query($phone-down) {
         margin: 0;
     }
 }
@@ -106,7 +126,7 @@ p {
 .header--big {
     font-size: 70px;
     margin-top: 0;
-    @include media-query(680px) {
+    @include media-query($phone-down) {
         font-size: 48px;
     }
 }
@@ -119,7 +139,7 @@ p {
     margin-bottom: 40px;
     font-size: 8px;
     width: 100%;
-    @include media-query(680px) {
+    @include media-query($phone-down) {
         margin-bottom: 20px;
     }
 }
@@ -136,8 +156,9 @@ p {
     -webkit-font-smoothing: antialiased;
     color: #eee;
     display: inline-block;
-    position: absolute;
+    float: left;
     line-height: 1.4;
+    margin-left: -3px;
     &:hover {
         color: #eee;
         text-decoration: none;
@@ -224,7 +245,7 @@ img {
 
 .post--home {
     margin-bottom: 70px;
-    @include media-query(680px) {
+    @include media-query($phone-down) {
         margin-bottom: 40px;
     }
 }
@@ -336,6 +357,44 @@ img {
     }
 }
 
+// CV
+
+.cv-email {
+    margin-top: -2rem;
+    color: #444;
+    font-size: 1.2rem;
+}
+
+.cv-section {
+    position: relative;
+    + .cv-section {
+        border-top: solid 0.5rem rgba($brand-primary, 0.1);
+        padding-top: 2rem;
+        margin-top: 5rem;
+    }
+}
+
+.cv-item {
+    margin: 2rem 0;
+    p {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.cv-item__header {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.cv-item__subheader {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    @include media-query($phone-down) {
+        font-size: 1rem;
+    }
+}
+
 // Buttons
 
 .btn {
@@ -348,7 +407,7 @@ img {
     padding: 10px 15px;
     margin-bottom: 15px;
     transition: 0.2s all;
-    @include media-query(680px) {
+    @include media-query($phone-down) {
         display: block;
         margin-bottom: 10px;
     }
