@@ -2,11 +2,11 @@
 layout: default
 ---
 <div class="home" role="main">
-    <div class="container">
+    <div class="site-content">
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h1 class="header--spaced" itemscope itemprop="Person" itemtype="http://schema.org/Person">I'm <span itemprop="name">Carl Wood</span>, a <span itemprop="jobTitle">front-end developer</span> with a passion for UX <span class="amp">&amp;</span> beautiful markup.</h1>
+                <h1 class="header--spaced" itemscope itemprop="Person" itemtype="http://schema.org/Person">I'm <span itemprop="name">Carl Wood</span>, a <span itemprop="jobTitle">front-end developer</span> with a passion for UX, performance <span class="amp">&amp;</span>beautiful markup.</h1>
             </div>
         </div>
    
@@ -52,19 +52,6 @@ layout: default
                 {% endfor %}
             </div>
         </div>
-
-        <hr class="hr">
-
-        <h2>Things I've written</h2>
-        <ul class="list-unstyled list-inline">
-            {% for post in site.posts %}
-                {% if post.type contains 'blog' %}
-                    <li>
-                        <a class="mini-btn" href="{{ post.url }}">{{ post.title }}</a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
 
         <hr class="hr">
 
