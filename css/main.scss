@@ -159,6 +159,9 @@ p {
     float: left;
     line-height: 1.4;
     margin-left: -3px;
+    @include media-query($phone-down) {
+        padding: 19px 10px;
+    }
     &:hover {
         color: #eee;
         text-decoration: none;
@@ -207,6 +210,9 @@ p {
     letter-spacing: 0.2em;
     -webkit-font-smoothing: antialiased;
     transition: all 0.2s;
+    @include media-query($phone-down) {
+        padding: 20px 10px 15px 10px;
+    }
     &:hover,
     &:focus,
     &:active {
