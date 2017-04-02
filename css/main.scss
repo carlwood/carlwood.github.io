@@ -278,6 +278,7 @@ img {
 }
 
 .post--labs {
+    margin-top: 30px;
     .post__link {
         display: flex;
         @include media-query($phone-down) {
