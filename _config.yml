@@ -1,8 +1,8 @@
 # Site settings
 title: Carl Wood - Portfolio
-email: carl@whiteoctober.co.uk
+email: cjwood17@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  London-based front-end developer with a passion for beautiful markup.
+  Experienced front-end developer with a passion for beautiful markup.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://carlwood.net" # the base hostname & protocol for your site
 twitter_username: carljwood
