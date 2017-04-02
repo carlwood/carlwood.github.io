@@ -159,7 +159,11 @@ p {
     float: left;
     line-height: 1.4;
     margin-left: -3px;
-    &:hover {
+    @include media-query($phone-down) {
+        padding: 19px 10px;
+    }
+    &:hover,
+    &:focus {
         color: #eee;
         text-decoration: none;
     }
@@ -207,6 +211,9 @@ p {
     letter-spacing: 0.2em;
     -webkit-font-smoothing: antialiased;
     transition: all 0.2s;
+    @include media-query($phone-down) {
+        padding: 20px 10px 15px 10px;
+    }
     &:hover,
     &:focus,
     &:active {
@@ -289,9 +296,33 @@ img {
 
 .post__link {
     color: #444;
-    &:hover {
+    overflow: hidden;
+    &:hover,
+    &:focus {
         color: $brand-primary;
+        .post__hover-detail {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
     }
+}
+
+.post__hover-detail {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background: rgba($brand-primary, 0.95);
+    color: $brand-color1;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(4rem);
 }
 
 // Blog posts
