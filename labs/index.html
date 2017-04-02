@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div role="main">
+    <div class="site-content">
+        <h1>Lab projects</h1>
+        <div class="item-listing">
+            {% for post in site.posts %}
+                {% if post.type contains 'labs' %}
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                            <div class="post--labs">
+                                <a class="post__link" href="{{ post.siteurl }}">
+                                    <div class="labs-img">
+                                        <img itemprop="image" src="{{ post.image }}" alt="{{ post.title }}">
+                                    </div>
+                                    <div class="labs-info">
+                                        <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                        {{post.desc}}
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

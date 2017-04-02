@@ -277,6 +277,39 @@ img {
     }
 }
 
+.post--labs {
+    .post__link {
+        display: flex;
+        @include media-query($phone-down) {
+            display: initial;
+        }
+    }
+}
+
+.labs-img {
+    flex: 1;
+}
+
+.labs-info {
+    flex: 2;
+}
+
+.labs-info {
+    color: #888;
+    font-family: 'Lato', sans-serif;
+    padding-left: 3rem;
+    @include media-query($phone-down) {
+        padding: 1.25rem 0 0 0;
+    }
+    .work-title {
+        margin-top: 0;
+    }
+    .work-title,
+    .work-skills {
+        text-align: left;
+    }
+}
+
 // Work examples on home page
 
 .work-title {
