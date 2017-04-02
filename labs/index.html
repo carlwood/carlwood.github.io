@@ -7,20 +7,20 @@ layout: default
         <div class="item-listing">
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                    <p class="u-center">Labs is a place for my code experiments; whether I'm learning a new language or trying out a new JS framework, you'll find them here.</p>
+                    <p class="u-center">Labs is a place for my code experiments; whether I'm learning a new language or trying out a new JS framework, you'll find the projects here.</p>
                     <hr class="hr">
                     {% for post in site.posts %}
                         {% if post.type contains 'labs' %}
                             <div class="post--labs">
-                                <a class="post__link" href="{{ post.siteurl }}">
-                                    <div class="labs-img">
+                                <div class="labs-img">
+                                    <a class="post__link" href="{{ post.siteurl }}">
                                         <img itemprop="image" src="{{ post.image }}" alt="{{ post.title }}">
-                                    </div>
-                                    <div class="labs-info">
-                                        <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
-                                        {{post.desc}}
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+                                <div class="labs-info">
+                                    <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                    {{post.content}}
+                                </div>
                             </div>
                         {% endif %}
                     {% endfor %}
