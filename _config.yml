@@ -12,6 +12,8 @@ github_username:  carlwood
 markdown: kramdown
 permalink: blog/:title
 higlighter: true
+sass:
+  style: compressed
 
 # Google Analytics
 ga_domain: carlwood.net
