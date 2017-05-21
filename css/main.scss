@@ -292,22 +292,26 @@ img {
 }
 
 .labs-info {
-    flex: 2;
-}
-
-.labs-info {
     color: $grey1;
     font-family: 'Lato', sans-serif;
     padding-left: 3rem;
+    flex: 2;
+
     @include media-query($phone-down) {
         padding: 1.25rem 0 0 0;
     }
+
     .work-title {
         margin-top: 0;
     }
+
     .work-title,
     .work-skills {
         text-align: left;
+    }
+
+    p a {
+        text-decoration: underline;
     }
 }
 
