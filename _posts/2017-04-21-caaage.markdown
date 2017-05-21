@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Caaage"
+category: post
+type: labs
+siteurl: caaage
+image: ../assets/img/caaage.jpg
+skills: ['Vue.js']
+---
+I'd been wanting an excuse to play with The Movie DB API, CSS grids, and vue.js, so I decided to create a simple quiz. My app, Caaage, grabs 12 films that Nicholas Cage appears in and challenges you to name them. Vue.js made it simple to integrate user form actions with the API response.
+
+[Caaage on Github &rarr;](https://github.com/carlwood/caaage)

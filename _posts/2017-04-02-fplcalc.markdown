@@ -4,7 +4,7 @@ title:  "FPL Calc"
 category: post
 type: labs
 siteurl: fplcalc
-image: ../assets/img/fplcalc.jpg
+image: ../assets/img/fpl.jpg
 skills: ['React']
 ---
 To develop my React skills, I created a simple Fantasy Premier League points calculator; the idea being that I could predict what my player could score on a given week. The React Virtual DOM worked well in displaying player score updates based on several variables: player position, goals, cards, etc. 
