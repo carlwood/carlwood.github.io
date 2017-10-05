@@ -5,5 +5,5 @@ category: post
 type: work
 siteurl: http://www.rebeccahurst.co.uk/
 image: assets/img/rebecca-hurst.jpg
-skills: ['HTML/CSS', 'Javascript']
+skills: 'HTML, CSS & Javascript'
 ---
