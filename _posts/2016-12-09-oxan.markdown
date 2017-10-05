@@ -2,7 +2,7 @@
 layout: post
 title:  "Oxford Analytica Daily Brief"
 category: post
-type: work
+type: 
 siteurl: http://www.oxan.com/services/subscription-analysis/daily-brief/
 image: assets/img/oxan.jpg
 skills: ['HTML/CSS', 'Javascript']

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Amanda Holden"
+category: post
+type: work
+siteurl: http://www.officialamandaholden.com
+image: assets/img/amanda.jpg
+skills: ['HTML/CSS', 'Javascript']
+---
