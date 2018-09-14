@@ -4,8 +4,7 @@ email: cjwood17@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Brighton-based experienced front-end developer with a passion for beautiful markup.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://carlwood.net" # the base hostname & protocol for your site
-twitter_username: carljwood
+url: "https://carlwood.github.io" # the base hostname & protocol for your site
 github_username:  carlwood
 
 # Build settings
@@ -16,5 +15,5 @@ sass:
   style: compressed
 
 # Google Analytics
-ga_domain: carlwood.net
+ga_domain: carlwood.github.io
 ga_tracking_id: UA-41063708-1
