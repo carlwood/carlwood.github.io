@@ -3,9 +3,36 @@
 ---
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Lato';
+    src: url("/assets/font/lato300.woff2") format("woff2"),
+         url("/assets/fonts/lato300.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("/assets/font/lato400.woff2") format("woff2"),
+         url("/assets/fonts/lato400.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url("/assets/font/playfair900.woff2") format("woff2"),
+         url("/assets/fonts/playfair900.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
 // Fonts, colours
 
-$font-family-serif: 'Merriweather', serif;
+$font-family-sans-serif: 'Lato', sans-serif;
 $brand-primary:     #57546B; // Purple
 $brand-color1:      #fdfdfd; // Grey
 $brand-color2:      #f9eae1; // Purply grey
@@ -33,7 +60,7 @@ $phone-down: 680px;
 body {
     background: $brand-color1;
     font-size: 15px;
-    font-family: $font-family-serif;
+    font-family: $font-family-sans-serif;
     line-height: 1.6;
     @include media-query($phone-down) {
         font-size: 14px;
@@ -76,7 +103,6 @@ h1 {
         letter-spacing: 3px;
         margin-top: 15px;
         margin-bottom: 15px;
-        font-family: $font-family-serif;
     }
     @include media-query($phone-down) {
         font-size: 26px;
@@ -86,7 +112,7 @@ h1 {
 h2 {
     color: #444;
     font-size: 15px;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-family-sans-serif;
     margin-bottom: 15px;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
@@ -202,7 +228,7 @@ p {
     border-bottom: solid 5px transparent;
     color: $brand-color2;
     display: block;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-family-sans-serif;
     font-size: 18px;
     font-weight: 600;
     padding: 20px 15px 15px 15px;
@@ -292,7 +318,7 @@ img {
 
 .labs-info {
     color: $grey1;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-family-sans-serif;
     padding-left: 3rem;
     flex: 2;
 
@@ -325,7 +351,7 @@ img {
 
 .work-skills {
     color: $grey1;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-family-sans-serif;
     font-size: 13px;
     text-align: center;
     text-transform: uppercase;
@@ -367,7 +393,7 @@ img {
 .post__meta {
     display: inline-block;
     margin-top: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-family-sans-serif;
     text-transform: uppercase;
     margin-bottom: 20px;
     padding-bottom: 0;
