@@ -19,7 +19,13 @@ layout: amp
                         <div class="col-sm-6">
                             <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
                                 <a class="post__link" href="{{ post.siteurl }}">
-                                    <amp-img src="{{ post.image }}" alt="{{ post.title }}"></amp-img>
+                                    <amp-img
+                                        src="{{ post.image }}"
+                                        alt="{{ post.title }}"
+                                        width="1500"
+                                        height="793"
+                                        layout="responsive">
+                                    </amp-img>
                                     <span class="post__hover-detail">&nearr;</span>
                                 </a>
                                 <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
@@ -39,7 +45,13 @@ layout: amp
                         <div class="col-sm-4">
                             <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
                                 <a class="post__link" href="{{ post.siteurl }}" target="_blank">
-                                    <amp-img src="{{ post.image }}" alt="{{ post.title }}"></amp-img>
+                                    <amp-img
+                                        src="{{ post.image }}"
+                                        alt="{{ post.title }}"
+                                        width="1500"
+                                        height="793"
+                                        layout="responsive">
+                                    </amp-img>
                                     <span class="post__hover-detail">&nearr;</span>
                                 </a>
                                 <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
