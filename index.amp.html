@@ -1,0 +1,75 @@
+---
+layout: amp
+---
+<div class="home" role="main">
+    <div class="site-content">
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="header--spaced" itemscope itemprop="Person" itemtype="http://schema.org/Person">I'm <span itemprop="name">Carl Wood</span>, a <span itemprop="jobTitle">front-end developer</span> with a passion for UX, performance <span class="amp">&amp;</span> beautiful markup.</h1>
+            </div>
+        </div>
+   
+        <h2>A handful of my projects</h2>
+
+        <div class="item-listing">
+            <div class="row">
+                {% for post in site.posts %}
+                    {% if post.type contains 'headline' %}
+                        <div class="col-sm-6">
+                            <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
+                                <a class="post__link" href="{{ post.siteurl }}">
+                                    <amp-img src="{{ post.image }}" alt="{{ post.title }}"></amp-img>
+                                    <span class="post__hover-detail">&nearr;</span>
+                                </a>
+                                <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                <ul class="work-skills list-inline list-unstyled">
+                                    {% for skill in post.skills %}
+                                        <li>{{ skill }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for post in site.posts %}
+                    {% if post.type contains 'work' %}
+                        <div class="col-sm-4">
+                            <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
+                                <a class="post__link" href="{{ post.siteurl }}" target="_blank">
+                                    <amp-img src="{{ post.image }}" alt="{{ post.title }}"></amp-img>
+                                    <span class="post__hover-detail">&nearr;</span>
+                                </a>
+                                <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                <div class="work-skills">
+                                    {{ post.skills }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <hr class="hr">
+
+        <h2>Tools I use</h2>
+
+        <ul class="list-unstyled list-inline">
+          <li>HTML5/CSS3</li>
+          <li>Javascript (ES6)</li>
+          <li>Sass</li>
+          <li>Git (CLI)</li>
+          <li>NPM</li>
+          <li>Gulp</li>
+          <li>Jekyll</li>
+          <li>jQuery</li>
+          <li>Knockout.js</li>
+          <li>Vue.js</li>
+          <li>React</li>
+        </ul>
+
+    </div>
+</div>
