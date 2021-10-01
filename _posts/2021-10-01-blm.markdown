@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "BLM Resources"
+category: post
+type: headline
+siteurl: https://blm-resources.netlify.app/
+image: assets/img/blm.jpg
+skills: 'A side project built with Next.js, GraphQL and Strapi (Headless CMS). Design by me.'
+---

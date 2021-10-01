@@ -4,25 +4,26 @@ layout: default
 <div class="home" role="main">
     <div class="site-content">
 
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <h1 class="header--spaced" itemscope itemprop="Person" itemtype="http://schema.org/Person">I'm <span itemprop="name">Carl Wood</span>, a <span itemprop="jobTitle">Senior Frontend Developer</span> with a passion for accessibility, performance <span class="amp">&amp;</span> robust styling.</h1>
-            </div>
-        </div>
+
+        <h1 class="header--spaced" itemscope itemprop="Person" itemtype="http://schema.org/Person">I'm <span itemprop="name">Carl Wood</span>, a <span itemprop="jobTitle">Senior Frontend Developer</span> with 10&nbsp;years experience of building user interfaces.</h1>
    
-        <h2>A handful of my projects</h2>
+        <h2>My Work</h2>
+
+        <p>(Some of my most recent work has been under NDA – feel free to ask me about it!)</p>
 
         <div class="item-listing">
             <div class="row">
                 {% for post in site.posts %}
                     {% if post.type contains 'headline' %}
                         <div class="col-sm-6">
-                            <div class="post--home" itemscope itemtype="http://schema.org/WebSite">
-                                <a class="post__link" href="{{ post.siteurl }}">
+                            <div class="post--home post--headline" itemscope itemtype="http://schema.org/WebSite">
+                                <a class="post__link" href="{{ post.siteurl }}" target="_blank">
                                     <img itemprop="image" src="{{ post.image }}" alt="{{ post.title }}">
                                     <span class="post__hover-detail">&nearr;</span>
                                 </a>
-                                <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                <h2 class="work-title" itemprop="name">
+                                    <a href="{{ post.siteurl }}" target="_blank">{{ post.title }}</a>
+                                </h2>
                                 <ul class="work-skills list-inline list-unstyled">
                                     {% for skill in post.skills %}
                                         <li>{{ skill }}</li>
@@ -42,7 +43,9 @@ layout: default
                                     <img itemprop="image" src="{{ post.image }}" alt="{{ post.title }}">
                                     <span class="post__hover-detail">&nearr;</span>
                                 </a>
-                                <h2 class="work-title" itemprop="name">{{ post.title }}</h2>
+                                <h2 class="work-title" itemprop="name">
+                                    <a href="{{ post.siteurl }}" target="_blank">{{ post.title }}</a>
+                                </h2>
                                 <div class="work-skills">
                                     {{ post.skills }}
                                 </div>
@@ -53,9 +56,7 @@ layout: default
             </div>
         </div>
 
-        <hr class="hr">
-
-        <h2>Tools I use</h2>
+        <h2>Skillset</h2>
 
         <ul class="list-unstyled list-inline">
           <li>HTML5/CSS3</li>
@@ -63,8 +64,9 @@ layout: default
           <li>Javascript (ES6)</li>
           <li>TypeScript</li>
           <li>React</li>
-          <li>Storybook</li>
+          <li>Next.js</li>
           <li>Vue.js</li>
+          <li>Storybook</li>
           <li>Git (CLI)</li>
           <li>NPM</li>
           <li>Webpack</li>

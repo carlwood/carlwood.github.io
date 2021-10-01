@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Camden GP"
+title:  "Camden CCG"
 category: post
-type: headline
+type: work
 siteurl: http://gps.camdenccg.nhs.uk
 image: assets/img/ccg.jpg
-skills: 'HTML, CSS & Javascript'
+skills: 'Frontend build for a large CMS-powered website.'
 ---

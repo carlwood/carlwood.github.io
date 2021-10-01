@@ -5,5 +5,5 @@ category: post
 type: headline
 siteurl: https://thefoodpeople.co.uk/free-download-2020/
 image: assets/img/tfp.jpg
-skills: 'HTML, CSS & Javascript (Vue)'
+skills: 'A microsite built in HTML and CSS with a dynamic lead generation form built with Vue.js'
 ---
