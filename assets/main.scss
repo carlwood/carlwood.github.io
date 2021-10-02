@@ -3,32 +3,6 @@
 ---
 @charset "utf-8";
 
-@font-face {
-    font-family: 'Lato';
-    src: url("/assets/font/lato300.woff2") format("woff2"),
-         url("/assets/fonts/lato300.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: fallback;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url("/assets/font/lato400.woff2") format("woff2"),
-         url("/assets/fonts/lato400.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: fallback;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url("/assets/font/playfair900.woff2") format("woff2"),
-         url("/assets/fonts/playfair900.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-    font-display: fallback;
-}
 
 // Fonts, colours
 
@@ -63,7 +37,7 @@ body {
     font-family: $font-family-sans-serif;
     line-height: 1.5;
     @include media-query($phone-down) {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -91,16 +65,21 @@ h1, h2 {
 h1 {
     font-size: 35px;
     line-height: 1.4;
-    margin-top: 30px;
-    margin-bottom: 80px;
+    margin-top: 0;
+    margin-bottom: 70px;
     text-transform: none;
 
     @include media-query($phone-down) {
         font-size: 26px;
+        margin-bottom: 60px;
     }
 
     + .lead {
-        margin: -60px 0 80px;
+        margin: -60px 0 70px;
+
+        @include media-query($phone-down) {
+            margin: -50px 0 60px;
+        }
     }
 }
 
@@ -110,6 +89,10 @@ h2 {
     text-transform: uppercase;
     margin-bottom: 25px;
     font-weight: 700;
+
+    @include media-query($phone-down) {
+        font-size: 19px;
+    }
 }
 
 // Block type
@@ -136,12 +119,12 @@ p {
 // Header
 
 .site-header {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     width: 100%;
-    padding: 20px 0;
+    padding: 30px 0 0;
 
     @include media-query($phone-down) {
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 }
 
@@ -234,7 +217,7 @@ img {
     margin-bottom: 80px;
 
     @include media-query($phone-down) {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 }
 
@@ -294,6 +277,7 @@ img {
     margin: 20px 0 7px;
     font-weight: 700;
     font-size: 18px;
+    line-height: 1.4;
     text-transform: inherit;
 
     .post--headline & {
@@ -304,7 +288,7 @@ img {
 
 .work-skills {
     color: $grey1;
-    font-size: 14px;
+    font-size: 15px;
 
     .post--headline & {
         font-size: 16px;
