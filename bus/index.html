@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bus Stop">
+<title>Mithras House</title>
+<style>
+  @font-face {
+    font-family: Doto;
+    src: url("fonts/Doto.ttf") format("truetype");
+    font-weight: 100 900;
+  }
+  :root {
+    --led: #ff9a1f;
+    --glow: 0 0 .15em rgba(255, 140, 0, .8);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    padding: max(2vmin, env(safe-area-inset-top)) max(2vmin, env(safe-area-inset-right))
+             max(2vmin, env(safe-area-inset-bottom)) max(2vmin, env(safe-area-inset-left));
+    font-family: Doto, Menlo, monospace;
+    font-weight: 800;
+    font-variation-settings: "ROND" 100;
+    color: var(--led);
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .board {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2vmin 4vmin;
+    background: #0a0a0a;
+    border-radius: 2vmin;
+    font-size: min(9.5vh, 6vw);
+  }
+  header { position: relative; text-align: center; }
+  h1 {
+    margin: 0;
+    font: 700 .95em -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #e6e6e6;
+  }
+  .clock {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: .7em;
+    text-shadow: var(--glow);
+  }
+  table {
+    width: 100%;
+    margin-top: .2em;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  th {
+    font: .4em -apple-system, Arial, sans-serif;
+    color: #c8c8c8;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  th, td { padding: 0 .5ch; }
+  .route { width: 4ch; }
+  .time { width: 7.5ch; text-align: right; }
+  td {
+    padding-block: .1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: var(--glow);
+  }
+</style>
+</head>
+<body>
+  <main class="board">
+    <header>
+      <h1>Mithras House</h1>
+      <div class="clock" id="clock"></div>
+    </header>
+    <table>
+      <colgroup><col class="route"><col><col class="time"></colgroup>
+      <thead>
+        <tr><th>Route</th><th>Destination</th><th class="time">Time</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+
+<script>
+  const MINUTE = 60 * 1000;
+
+  // Routes from Moulsecoomb, adjacent to Mithras House (heading into town).
+  // 25 and 49 are listed twice because they come most often.
+  const ROUTES = [
+    ['3X', 'Hangleton'],
+    ['23', 'Brighton'],
+    ['23', 'Peacehaven'],
+    ['24', 'Brighton'],
+    ['25', 'Brighton'],
+    ['25', 'Brighton'],
+    ['48', 'Brighton'],
+    ['49', 'Hove'],
+    ['49', 'Hove'],
+  ];
+
+  const randInt = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+  const randomRoute = () => ROUTES[randInt(0, ROUTES.length - 1)];
+
+  // A fresh set of buses each time the board opens, the first due soon
+  const [firstRoute, firstDest] = randomRoute();
+  let buses = [{ route: firstRoute, dest: firstDest, dueAt: Date.now() + randInt(1, 3) * MINUTE + 30 * 1000 }];
+
+  // Added after the last bus, or after now if the board emptied while the phone was asleep
+  function addBus(t) {
+    const [route, dest] = randomRoute();
+    const last = buses.length ? buses[buses.length - 1].dueAt : t;
+    // A gap of 1–3 minutes, to the second, so the rows tick down at different moments
+    buses.push({ route, dest, dueAt: Math.max(last, t) + randInt(60, 180) * 1000 });
+  }
+
+  function timeText(bus, t) {
+    const left = bus.dueAt - t;
+    return left < MINUTE ? 'Due' : `${Math.floor(left / MINUTE)} min`;
+  }
+
+  function update() {
+    const t = Date.now();
+
+    // A bus leaves the board one minute after it shows "Due"
+    buses = buses.filter(bus => bus.dueAt - t > 0);
+    while (buses.length < 5) addBus(t);
+
+    document.getElementById('rows').innerHTML = buses.map(bus => `
+      <tr>
+        <td>${bus.route}</td>
+        <td>${bus.dest}</td>
+        <td class="time">${timeText(bus, t)}</td>
+      </tr>`).join('');
+
+    document.getElementById('clock').textContent =
+      new Date(t).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  update();
+  setInterval(update, 1000);
+
+  // Save the page on the phone so it opens without internet
+  if ('serviceWorker' in navigator && window.isSecureContext) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+</body>
+</html>
