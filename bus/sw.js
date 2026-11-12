@@ -1,6 +1,6 @@
 // Keeps a copy of the board on the phone so it opens without internet.
 // Change the version whenever index.html changes, so the phone picks up the update.
-const CACHE = 'mithras-board-v8';
+const CACHE = 'mithras-board-v10';
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(['./', './index.html', './fonts/Doto.ttf'])));
