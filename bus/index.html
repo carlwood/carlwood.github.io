@@ -100,22 +100,24 @@
   const MINUTE = 60 * 1000;
 
   // Routes from Moulsecoomb, adjacent to Mithras House (heading into town).
-  // 25 and 49 are listed twice because they come most often.
+  // The number is how often each comes: 25, 48 and 49 most, 78 least.
   const ROUTES = [
-    ['3X', 'Hardwick Road'],
-    ['23', 'Meridian Centre'],
-    ['23', 'Marina Cinema'],
-    ['24', 'Imperial Arcade'],
-    ['25', 'Old Steine'],
-    ['25', 'Old Steine'],
-    ['48', 'Imperial Arcade'],
-    ['49', 'Palmeira Square'],
-    ['49', 'Palmeira Square'],
-    ['78', 'Old Steine'],
+    ['3X', 'Hardwick Road', 2],
+    ['23', 'Meridian Centre', 2],
+    ['23', 'Marina Cinema', 2],
+    ['24', 'Imperial Arcade', 2],
+    ['25', 'Old Steine', 4],
+    ['48', 'Imperial Arcade', 4],
+    ['49', 'Palmeira Square', 4],
+    ['78', 'Old Steine', 1],
   ];
 
   const randInt = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
-  const randomRoute = () => ROUTES[randInt(0, ROUTES.length - 1)];
+  const TOTAL_WEIGHT = ROUTES.reduce((sum, [, , weight]) => sum + weight, 0);
+  function randomRoute() {
+    let n = randInt(1, TOTAL_WEIGHT);
+    return ROUTES.find(([, , weight]) => (n -= weight) <= 0);
+  }
 
   // A fresh set of buses each time the board opens, the first due soon
   const [firstRoute, firstDest] = randomRoute();
